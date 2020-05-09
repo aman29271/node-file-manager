@@ -1,0 +1,19 @@
+{
+  "name": "file-browser",
+  "version": "1.0.0",
+  "private": true,
+  "bin": "./lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "env-cmd nodemon lib/index.js",
+    "debug": "node --inspect lib/index.js"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "express": "^4.17.1",
+    "flat-cache": "^2.0.1",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.5",
+    "uuid": "^8.0.0"
+  }
+}
