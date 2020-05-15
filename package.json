@@ -6,19 +6,39 @@
 	"license": "MIT",
 	"scripts": {
 		"clean": "rimraf ./.cache",
-    "debug": "env-cmd node --inspect lib/index.js",
-    "debug-app": "DEBUG=express:* env-cmd node lib/index.js",
-    "dev": "run-s clean start",		
-		"start": "env-cmd nodemon lib/index.js"
+		"debug": "env-cmd PORT=3000 node --inspect lib/index.js",
+		"debug-app": "DEBUG=express:* env-cmd PORT=3000 NODE_ENV=development node lib/index.js",
+		"dev": "run-s clean start",
+		"format:js": "prettier-eslint ./lib/*.js ./lib/**/*.js --write",
+		"profile:view": "node --prof-process index.log > index.log.txt",
+		"start": "env-cmd nodemon lib/index.js",
+		"start:profile": "node --prof --no-logfile-per-isolate --log --logfile=index.log lib/index.js"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.js": [
+			"yarn run format:js",
+			"git add"
+		]
 	},
 	"devDependencies": {
 		"env-cmd": "^10.1.0",
+		"eslint": "^7.0.0",
+		"eslint-plugin-react": "^7.20.0",
 		"express": "^4.17.1",
 		"express-react-views": "^0.11.0",
 		"flat-cache": "^2.0.1",
+		"gen-uid": "^0.0.2",
+		"husky": "^4.2.5",
+		"lint-staged": "^10.2.2",
 		"nodemon": "^2.0.3",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.0.5",
+		"prettier-eslint-cli": "^5.0.0",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
 		"rimraf": "^3.0.2",

@@ -4,3 +4,6 @@ node_modules/
 experiments/
 data/
 yarn-error.log
+
+# logfile
+index.*
