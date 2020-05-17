@@ -15,7 +15,9 @@ function Index({ data }) {
 					}
 					if (e.type === 'file') {
 						return (
-							<img src={`/${e.uuid}`} height="100" width="100" key={e.uuid} />
+							<a href={`/${e.uuid}`} key={e.uuid} target="_blank">
+								<img src={`/${e.uuid}?h=100&w=100`} height="100" width="100" />
+							</a>
 						);
 					}
 				})}

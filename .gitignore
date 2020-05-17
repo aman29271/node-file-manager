@@ -7,3 +7,6 @@ yarn-error.log
 
 # logfile
 index.*
+# clinic log files
+.clinic/
+lib/test.js
