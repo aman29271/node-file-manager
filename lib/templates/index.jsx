@@ -14,11 +14,49 @@ function Index({ data }) {
 						);
 					}
 					if (e.type === 'file') {
-						return (
-							<a href={`/${e.uuid}`} key={e.uuid} target="_blank">
-								<img src={`/${e.uuid}?h=100&w=100`} height="100" width="100" />
-							</a>
-						);
+						switch (e.mimetype) {
+							case 'json':
+								return (
+									<a href={`/${e.uuid}`} key={e.uuid} target="_blank">
+										{e.name}
+									</a>
+								);
+							case 'pdf':
+								return (
+									<a href={`/${e.uuid}`} key={e.uuid} target="_blank">
+										{e.name}
+									</a>
+								);
+							case 'image/jpeg':
+							case 'image/png':
+								return (
+									<a href={`/${e.uuid}`} key={e.uuid} target="_blank">
+										<img src={`/${e.uuid}?w=100&h=100`} height="100" width="100" />
+									</a>
+								);
+							case 'video/mp4':
+								return (
+									<a href={`/${e.uuid}`} key={e.uuid} target="_blank">
+										<video controls height="100" width="177">
+											<source src={`/${e.uuid}`} type={e.mimetype}></source>
+										</video>
+									</a>
+								);
+							case 'video/x-matroska':
+								return (
+									<a href={`/${e.uuid}`} key={e.uuid} target="_blank">
+										<video controls height="100" width="177">
+											<source src={`/${e.uuid}`} type="video/webm"></source>
+										</video>
+									</a>
+								);
+							default:
+								return (
+									<a href={`/${e.uuid}`} key={e.uuid} target="_blank">
+										<img src={`/${e.uuid}`} />
+									</a>
+								);
+						}
 					}
 				})}
 			</ul>
