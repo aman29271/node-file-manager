@@ -6,7 +6,8 @@ data/
 yarn-error.log
 
 # logfile
-index.*
+index.log
+index.log.txt
 # clinic log files
 .clinic/
 lib/test.js

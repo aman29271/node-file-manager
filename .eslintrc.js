@@ -13,6 +13,16 @@ module.exports = {
 	parserOptions: {
 		ecmaVersion: 11,
 	},
+	overrides: [
+		{
+			files: 'lib/templates/*.jsx',
+			extends: ['plugin:react/recommended'],
+		},
+		{
+			files: ['lib/views/*.ejs', 'lib/views/**/*.ejs'],
+			plugins: ['ejs'],
+		},
+	],
 	rules: {
 		'prettier/prettier': 'error',
 		// indent: ['error', 'tab'],
