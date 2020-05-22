@@ -1,7 +1,3 @@
-AOS.init({
-	duration: 800,
-	easing: 'slide',
-});
 
 (function ($) {
 	'use strict';
@@ -23,16 +19,6 @@ AOS.init({
 	};
 	fullHeight();
 
-	// loader
-	var loader = function () {
-		setTimeout(function () {
-			if ($('#ftco-loader').length > 0) {
-				$('#ftco-loader').removeClass('show');
-			}
-		}, 1);
-	};
-	loader();
-
 	// Scrollax
 	$.Scrollax();
 
@@ -50,7 +36,7 @@ AOS.init({
 			}
 		});
 	};
-	burgerMenu();
+	// burgerMenu();
 
 	// Click outside of offcanvass
 	var mobileMenuOutsideClick = function () {
@@ -71,7 +57,7 @@ AOS.init({
 			}
 		});
 	};
-	mobileMenuOutsideClick();
+	// mobileMenuOutsideClick();
 
 	var carousel = function () {
 		$('.home-slider').owlCarousel({
@@ -157,13 +143,4 @@ AOS.init({
 		},
 	});
 
-	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-		disableOn: 700,
-		type: 'iframe',
-		mainClass: 'mfp-fade',
-		removalDelay: 160,
-		preloader: false,
-
-		fixedContentPos: false,
-	});
 })(jQuery);

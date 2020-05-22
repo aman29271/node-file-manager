@@ -1,7 +1,13 @@
 /* eslint-disable react/prop-types */
 const React = require('react');
 
-const VideoTemplate = ({ uuid }) => {
-	return <video src={`/${uuid}`} height="100" width="177" />;
+const Video = ({ data: { uuid, mime } }) => {
+	return (
+		<a href={`/${uuid}`} key={uuid} target="_blank" rel="noreferrer">
+			<video controls height="150" width="184" poster="/images/video-x-generic.svg" preload="none">
+				<source src={`/${uuid}`} type={mime}></source>
+			</video>
+		</a>
+	);
 };
-module.exports = VideoTemplate;
+module.exports = Video;

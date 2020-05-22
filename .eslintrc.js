@@ -22,6 +22,10 @@ module.exports = {
 			files: ['lib/views/*.ejs', 'lib/views/**/*.ejs'],
 			plugins: ['ejs'],
 		},
+		{
+			files: 'public/js/*.js',
+			env: { browser: true },
+		},
 	],
 	rules: {
 		'prettier/prettier': 'error',
