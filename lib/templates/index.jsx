@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 const React = require('react');
 // require('../styles/index.css')
 const Image = require('./Image');
@@ -48,6 +48,7 @@ function Index({ data }) {
 			</div>
 			<Loader />
 			<JsBundle />
+			<script src="js/intersection-observer.js"></script>
 			<script src="js/manifest.js"></script>
 		</>
 	);

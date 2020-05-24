@@ -1,4 +1,3 @@
-
 (function ($) {
 	'use strict';
 
@@ -132,7 +131,7 @@
 		gallery: {
 			enabled: true,
 			navigateByImgClick: true,
-			preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+			preload: [1, 1], // Will preload 0 - before current, and 1 after the current image
 		},
 		image: {
 			verticalFit: true,
@@ -141,6 +140,10 @@
 			enabled: true,
 			duration: 300, // don't foget to change the duration also in CSS
 		},
+		callbacks: {
+			lazyLoad: function (item) {
+				console.log(item);
+			},
+		},
 	});
-
 })(jQuery);
