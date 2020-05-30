@@ -20,7 +20,7 @@ const Misc = ({ data: { uuid, name }, type }) => {
 			ImageName = '/images/applications-system.svg';
 	}
 	return (
-		<div className="col-md-2 col-6 ftco-animate">
+		<div className="col-md-2 col-6 ">
 			<a href={`/${uuid}`} key={uuid} className="anchor-misc">
 				<img src={ImageName} height="64" width="64" />
 				<p>{name}</p>

@@ -49,7 +49,6 @@ function Index({ data }) {
 			<Loader />
 			<JsBundle />
 			<script src="js/intersection-observer.js"></script>
-			<script src="js/manifest.js"></script>
 		</>
 	);
 }

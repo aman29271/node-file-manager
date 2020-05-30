@@ -6,17 +6,11 @@ const Head = () => {
 			<title>Home Page</title>
 			<meta charSet="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-			<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
-			<link rel="stylesheet" href="css/animate.css" />
-			<link rel="stylesheet" href="css/owl.carousel.min.css" />
-			<link rel="stylesheet" href="css/owl.theme.default.min.css" />
-			<link rel="stylesheet" href="css/magnific-popup.css" />
-			<link rel="stylesheet" href="css/ionicons.min.css" />
-			<link rel="stylesheet" href="css/bootstrap-datepicker.css" />
-			<link rel="stylesheet" href="css/jquery.timepicker.css" />
-			<link rel="stylesheet" href="css/flaticon.css" />
-			<link rel="stylesheet" href="css/icomoon.css" />
 			<link rel="stylesheet" href="css/style.css" />
+			<link rel="preload" as="script" href="js/jquery.min.js" />
+			<link rel="preload" as="script" href="js/manifest.js" />
+			<link rel="preload" as="script" href="js/owl.carousel.min.js" />
+			<link rel="preload" as="script" href="js/jquery.magnific-popup.min.js" />
 		</head>
 	);
 };
