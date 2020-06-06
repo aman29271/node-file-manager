@@ -6,12 +6,14 @@ window.addEventListener('DOMContentLoaded', () => {
 			function (entries, observer) {
 				entries.forEach((e) => {
 					if (e.isIntersecting) {
-						const DOMNode = e.target;
-						const { clientHeight: height, clientWidth: width } = DOMNode;
-						const srcStr = e.target.pathname;
-						const src = `${srcStr}?h=${height}&w=${width}`;
-						DOMNode.style.backgroundImage = `url(${src})`;
-						observer.unobserve(DOMNode);
+						requestAnimationFrame(() => {
+							const DOMNode = e.target;
+							const { clientHeight: height, clientWidth: width } = DOMNode;
+							const srcStr = e.target.pathname;
+							const src = `${srcStr}?h=${height}&w=${width}`;
+							DOMNode.style.backgroundImage = `url(${src})`;
+							observer.unobserve(DOMNode);
+						});
 					}
 				});
 			},

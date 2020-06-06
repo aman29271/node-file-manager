@@ -11,6 +11,7 @@ const Head = () => {
 			<link rel="preload" as="script" href="js/manifest.js" />
 			<link rel="preload" as="script" href="js/owl.carousel.min.js" />
 			<link rel="preload" as="script" href="js/jquery.magnific-popup.min.js" />
+			<link rel="preload" as="script" href="js/jquery.waypoints.min.js" />
 		</head>
 	);
 };
