@@ -7,7 +7,7 @@ const Image = ({ data: { uuid } }) => {
 			<a
 				href={`/${uuid}`}
 				className="photography-entry img image-popup d-flex justify-content-center align-items-center"
-				style={{ backgroundImage: 'url(/images/image-x-pict.svg' }}
+				style={{ backgroundImage: 'url(/static/images/image-x-pict.svg' }}
 			></a>
 		</div>
 	);

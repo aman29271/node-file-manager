@@ -16,7 +16,7 @@ module.exports = {
 	overrides: [
 		{
 			files: 'lib/templates/*.jsx',
-			extends: ['plugin:react/recommended'],
+			plugins: ['react'],
 			env: {
 				browser: true,
 			},
